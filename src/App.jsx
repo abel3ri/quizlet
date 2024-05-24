@@ -1,9 +1,8 @@
 import "./App.css";
-import { useEffect } from "react";
+import { useEffect, useReducer } from "react";
 import axios from "axios";
 import Header from "./components/Header";
 import Main from "./components/Main";
-import { useReducer } from "react";
 import Loader from "./components/Loader";
 import Error from "./components/Error";
 import StartScreen from "./components/StartScreen";
