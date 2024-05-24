@@ -1,0 +1,14 @@
+.app .app-header {
+  display: flex;
+  user-select: none;
+  gap: 2.4rem;
+  align-items: center;
+}
+.app .app-header h1 {
+  font-family: "Codystar";
+
+  font-size: 4rem;
+}
+.app .app-header img {
+  width: 4rem;
+}
