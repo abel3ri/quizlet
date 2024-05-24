@@ -6,6 +6,7 @@ import Main from "./components/Main";
 import { useReducer } from "react";
 import Loader from "./components/Loader";
 import Error from "./components/Error";
+import StartScreen from "./components/StartScreen";
 
 const initalState = {
   questions: [],
@@ -17,7 +18,7 @@ const initalState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "dataReceived":
-      return { ...state, questions: action.payload, status: "error" };
+      return { ...state, questions: action.payload, status: "ready" };
 
     case "dataFailed":
       return { ...state, status: "error" };
@@ -43,11 +44,12 @@ function App() {
 
   return (
     <div className="app">
-      {console.log(status)}
+      {/* {console.log(status)} */}
       <Header />
       <Main>
         {status == "loading" && <Loader />}
         {status == "error" && <Error />}
+        {status == "ready" && <StartScreen questions={questions} />}
       </Main>
     </div>
   );
