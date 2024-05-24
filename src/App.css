@@ -2,8 +2,9 @@
   padding: 1.5rem 3rem;
   display: flex;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  gap: 1rem;
+  gap: 4rem;
 }
 
 .status-container {
@@ -11,6 +12,15 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+  background-color: #3b3b3b;
 }
 
 /* HTML: <div class="loader"></div> */
