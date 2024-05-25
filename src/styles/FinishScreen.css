@@ -1,0 +1,15 @@
+.finish-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.finish-screen .result {
+  background-color: rgb(7, 137, 137);
+  padding: 1.2rem 4rem;
+  border-radius: 100rem;
+}
+
+.finish-screen .btn-restart {
+  width: fit-content;
+}
