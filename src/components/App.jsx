@@ -13,6 +13,7 @@ const initalState = {
   // 'loading', 'error', 'ready', 'active', 'finished'
   status: "loading",
   index: 0,
+  score: 0,
   answer: null,
 };
 
