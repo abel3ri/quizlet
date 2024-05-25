@@ -4,7 +4,6 @@ import Option from "./Option";
 export default function Question({ question, dispatch, answer }) {
   return (
     <div className="question">
-      {/* {console.log(question)} */}
       <h4 className="question-title">{question.question}</h4>
 
       <Option
@@ -18,8 +17,14 @@ export default function Question({ question, dispatch, answer }) {
         <div className="timer">
           <h5>7:12</h5>
         </div>
+
         {answer != null && (
-          <button onClick={() => {}} className="btn btn-next">
+          <button
+            onClick={() => {
+              return dispatch({ type: "nextQuestion" });
+            }}
+            className="btn btn-next"
+          >
             Next
           </button>
         )}
