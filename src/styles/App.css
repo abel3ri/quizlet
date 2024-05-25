@@ -1,0 +1,74 @@
+.app {
+  padding: 1.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.status-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.btn {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  border-radius: 100rem;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+
+  background-color: #3b3b3b;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #636363;
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 1.2rem;
+  aspect-ratio: 1;
+  display: grid;
+  border-radius: 50%;
+  background: linear-gradient(
+        0deg,
+        rgba(17, 216, 17, 0.5) 30%,
+        #19ce5800 0 70%,
+        rgb(46, 173, 14) 0
+      )
+      50%/8% 100%,
+    linear-gradient(
+        90deg,
+        rgba(21, 176, 21, 0.25) 30%,
+        #1bb91000 0 70%,
+        rgba(21, 194, 18, 0.75) 0
+      )
+      50%/100% 8%;
+  background-repeat: no-repeat;
+  animation: l23 1s infinite steps(12);
+}
+.loader::before,
+.loader::after {
+  content: "";
+  grid-area: 1/1;
+  border-radius: 50%;
+  background: inherit;
+  opacity: 0.915;
+  transform: rotate(30deg);
+}
+.loader::after {
+  opacity: 0.83;
+  transform: rotate(60deg);
+}
+@keyframes l23 {
+  100% {
+    transform: rotate(1turn);
+  }
+}
